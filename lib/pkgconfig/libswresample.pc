@@ -1,0 +1,14 @@
+prefix=./wasm
+exec_prefix=${prefix}
+libdir=./wasm/lib
+includedir=./wasm/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 4.10.100
+Requires: libavutil >= 58.2.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswresample -lm
+Libs.private: 
+Cflags: -I${includedir}
